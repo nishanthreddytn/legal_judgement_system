@@ -1,0 +1,43 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+node_modules/
+dist/
+
+.env
+.env.*
+
+.vscode/
+.idea/
+
+.pytest_cache/
+.mypy_cache/
+
+.cache/
+huggingface_cache/
+transformers_cache/
+
+*.log
+
+.DS_Store
+Thumbs.db
+
+# Legal AI data and generated files
+backend/uploads/
+backend/data/raw/
+backend/data/ner/
+backend/data/embeddings/
+
+# ML checkpoints and generated model weights
+backend/models/**/checkpoints/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Generated training/debug files
+backend/debug_train.txt
+backend/training_log.txt
+backend/data/processed/*.json
