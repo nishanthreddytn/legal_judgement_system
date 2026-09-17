@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import axios from "axios";
 import "./styles/app.css";
 
-const API = "http://localhost:8001";
+const API = "https://funny-trains-read.loca.lt";
 
 /* =========================================================
    SHARED MARKS / ICONS
