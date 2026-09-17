@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import axios from "axios";
 import "./styles/app.css";
 
-const API = "http://127.0.0.1:8000";
+const API = "http://localhost:8000";
 
 /* =========================================================
    SHARED MARKS / ICONS

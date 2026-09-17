@@ -49,7 +49,7 @@ async def upload_case(file: UploadFile = File(...)):
         shutil.copyfileobj(file.file, buffer)
 
     try:
-        text = extract_text_from_pdf(str(file_path))
+        text, extraction_metadata = extract_text_from_pdf(str(file_path))
 
         if not text or len(text.strip()) < 50:
             raise HTTPException(
@@ -104,7 +104,8 @@ async def upload_case(file: UploadFile = File(...)):
             "explanation": explanation,
             "results": results,
             "precedents": precedents,
-            "document_name": file.filename
+            "document_name": file.filename,
+            "extraction_metadata": extraction_metadata
         }
 
     except HTTPException:
